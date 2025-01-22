@@ -1,0 +1,270 @@
+body::after {
+	content: "";
+	background-color: rgba(0, 0, 0, 0.5);
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: opacity 0.8s ease 0s;
+	pointer-events: none;
+	z-index: 149;
+}
+body.popup-show::after {
+	opacity: 1;
+}
+.popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	padding: 30px 0;
+	transition: visibility 0.8s ease 0s;
+	visibility: hidden;
+	pointer-events: none;
+
+	@media (min-width:$mobileSmall){
+		padding: 30px 10px;
+	}
+}
+.popup_show {
+	z-index: 150;
+	visibility: visible;
+	overflow: auto;
+	pointer-events: auto;
+}
+.popup_show .popup__content {
+	visibility: visible;
+	transform: scale(1);
+}
+.popup__wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 100%;
+	flex: 1 1 auto;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.popup__content {
+	visibility: hidden;
+  transform: scale(0);
+  transition: transform 0.3s ease 0s;
+  background-color: var(--accent-color);
+  padding: 35px 15px;
+  width: 100%;
+  max-width: 700px;
+  box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.25);
+
+	@media (min-width:$mobile){
+		padding: 52px 58px 34px;
+	}
+
+	.lock & {
+		visibility: visible;
+	}
+}
+
+.popup__close {
+	position: absolute;
+	right: 15px;
+	top: 10px;
+	@media (min-width:$mobileSmall){
+		right: 33px;
+		top: 32px;
+	}
+
+
+	&::before {
+		font-size: 25px;
+	}
+}
+
+
+
+.order-call {
+  display: grid;
+  justify-items: center;
+  font-family: Montserrat;
+  font-size: 1.8rem;
+  color: var(--light-color-text);
+
+	// // .order-call__title
+	// &__title {
+	// 	margin-bottom: 90px;
+	// 	// font-family: Montserrat;
+	// 	font-size: 2rem;
+	// }
+
+	// .order-call__form
+	&__form {
+		min-width: 100%;
+		margin-bottom: 20px;
+	}
+
+	// .order-call__politics-user
+	&__politics-user {
+		text-align: center;
+		font-weight: 300;
+	}
+
+	// .order-call__thanks
+
+	&__thanks {
+		display: grid;
+		justify-items: center;
+		gap: 48px;
+	}
+
+	// .order-call__thanks-title
+
+	&__thanks-title {
+	}
+
+	// .order-call__thanks-text
+
+	&__thanks-text {
+		text-align: center;
+	}
+
+}
+
+
+.form {
+	display: grid;
+	gap: 20px;
+
+	&_service {
+		.form__submit {
+			input {
+				min-width: 160px;
+			}
+		}
+	}
+
+	// .form__row
+	&__row {
+		padding: 10px;
+		display: grid;
+		gap: 20px;
+		border: 1px solid transparent;
+		&._form-error {
+			border: 1px solid red;
+		}
+	}
+
+	&__label {
+		font-size: 1.4rem;
+		text-transform: uppercase;
+		color: var(--light-color-text);
+
+		// .form__label_center
+		&_center {
+			text-align: center;
+		}
+	}
+
+	// .form__input
+	&__input {
+		height: 42px;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+		position: relative;
+		
+		input {
+			background-color: transparent;
+			outline: none;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 22px;
+			color: #ffffff;
+
+			&::placeholder {
+				color: hsla(0, 0%, 100%, 0.5);
+				line-height: 1.375;
+			}
+		}
+
+
+	}
+
+		// .form__select
+		&__select {
+			display: flex;
+			justify-content: center;
+			gap: 10px;
+			margin: 0 -13px;
+			
+			@media (min-width:$mobileSmall){
+				margin: 0;
+				gap: 30px; 
+			}
+			@media (min-width:$mobile){
+				gap: 60px; 
+			}
+		}
+
+		// .form__select-item
+		&__select-item {
+			border-radius: 5px;
+			background: #FFF;
+			box-shadow: 5px 10px 15px 0px rgba(0, 0, 0, 0.25);
+			color: var(--main-color-text);
+			position: relative;
+			min-width: 93px;
+			cursor: pointer;
+
+			label {
+				display: grid;
+				justify-items: center;
+				gap: 10px;
+				padding: 9px 4px;
+
+				span::before {
+					color: var(--accent-color);
+					font-size: 24px;
+				}
+			}
+
+			input {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				opacity: 0;
+			}
+
+			input:checked ~ label::before {
+				@extend %ic;
+				content: "\e902";
+				width: 28px;
+				height: 28px;
+				background: #3771C8;
+				border-radius: 50%;
+				position: absolute;
+				top: -14px;
+				right: -14px;
+				font-size: 28px;
+				color: var(--light-color-text);
+				box-shadow: 2px 3px 5px 0px rgba(0, 0, 0, 0.25);
+			}
+		}
+
+	// .form__submit
+	&__submit {
+		display: flex;
+		justify-content: center;
+		button {
+			padding: 10px;
+			@media (min-width:$tablet){
+				padding: 10px 40px; 
+			}
+		}
+	}
+}
