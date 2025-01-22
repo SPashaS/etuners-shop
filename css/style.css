@@ -665,6 +665,7 @@ body.popup-show::after {
 
 .tabs__navigation {
   display: flex;
+  flex-wrap: wrap;
 }
 .tabs__title {
   border: 1px solid #DADADA;
@@ -912,7 +913,7 @@ h4 {
   font-weight: 700;
 }
 .price::after {
-  content: " р";
+  content: " 〒";
 }
 
 .wrapper {
@@ -2556,7 +2557,7 @@ h4 {
 }
 .product__carousels {
   display: grid;
-  grid-template-columns: 81.8619582665% 15.088282504%;
+  grid-template-columns: 1fr 0.25fr;
   gap: 10px;
   min-width: 0;
 }
@@ -2572,10 +2573,15 @@ h4 {
   font-family: var(--ff-second);
   color: var(--green);
   font-weight: 700;
-  font-size: 5rem;
+  font-size: 3rem;
   line-height: 1.08;
   letter-spacing: -0.1em;
   margin-bottom: 33px;
+}
+@media (min-width: 767.98px) {
+  .product__price {
+    font-size: 4rem;
+  }
 }
 .product__sizes, .product__colours {
   margin-bottom: 20px;
@@ -2597,9 +2603,14 @@ h4 {
   margin-bottom: 45px;
 }
 .product__btns {
-  display: flex;
+  display: grid;
   gap: 25px;
   align-items: center;
+}
+@media (min-width: 767.98px) {
+  .product__btns {
+    display: flex;
+  }
 }
 .product__favourites {
   font-size: 2.1rem;
