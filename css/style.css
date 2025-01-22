@@ -2837,15 +2837,8 @@ h4 {
   transition: all 0.3s ease 0s;
 }
 @media (hover: hover) {
-  .carousel-card:hover .carousel-card__img-ibg img {
-    clip-path: polygon(0 20px, 10px 20px, 10px 10px, 20px 10px, 20px 0, 100% 0, 100% calc(100% - 20px), calc(100% - 10px) calc(100% - 20px), calc(100% - 10px) calc(100% - 10px), calc(100% - 20px) calc(100% - 10px), calc(100% - 20px) 100%, 0 100%);
-  }
-  .carousel-card:hover .carousel-card__img-ibg::before {
-    opacity: 1;
-    scale: 1;
-  }
   .carousel-card:hover .carousel-card__title {
-    color: var(--green);
+    color: var(--accent-color);
   }
 }
 .carousel-card__img-ibg {
@@ -2853,28 +2846,6 @@ h4 {
   margin-bottom: 16px;
   transition: all 0.3s ease 0s;
   position: relative;
-}
-@media (min-width: 991.98px) {
-  .carousel-card__img-ibg::before {
-    content: "";
-    background: #000000;
-    filter: blur(11px);
-    position: absolute;
-    z-index: -1;
-    top: 3%;
-    left: 3%;
-    width: 94%;
-    height: 94%;
-    opacity: 0;
-    scale: 0.5;
-    transition: all 0.3s ease 0s;
-  }
-}
-.carousel-card__img-ibg img {
-  transition: clip-path 0.3s ease, transform 0.3s ease;
-}
-.carousel-card__title {
-  color: var(--second-text);
 }
 @font-face {
   font-family: "lg";
