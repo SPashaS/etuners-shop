@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20250123232048">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250124233602">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="theme-color" content="#222222">
@@ -43,15 +43,20 @@
 							</div>
 						</div>
 
-						<a href="#" class="header__action ">
+						<a href="#" class="header__action">
 							<div class="cart-icon  _icon-cart">
 								<span class="cart-icon__num">10</span>
 							</div>
 						</a>
 
-						<a href="#" class="header__action ">
+						<a href="#" class="header__action">
 							<div class="acc-icon _icon-acc"></div>
 						</a>
+
+						<a href="#" class="header__action">
+							<div class="favourite-icon _icon-favourite"></div>
+						</a>
+
 					</div>
 
 
@@ -920,29 +925,16 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20250123232048"></script>
-	<!-- <script>
-  window.addEventListener("load", function (e) {
-    const filter = document.querySelector('#filter');
-    window.scrollTo({
-    top: filter.getBoundingClientRect().top - 15,
-    left: 0,
-    behavior: "instant"
-    });
-  })
-</script>-->
-	<script>
-		// 	setTimeout(function () {
-		// 	  const bodyEl = document.body;
-		//     console.log('tut');
-		//     let tempButton = document.createElement("button");
-		//     tempButton.dataset.popup = "#order-call-thanks";
-		//     bodyEl.append(tempButton);
-		//     tempButton.click();
-		//     tempButton.remove();
-		// }, 500);
-	</script>
+	<script src="js/app.min.js?_v=20250124233602"></script>
 
+	<script>
+		// избранное
+		document.querySelectorAll('.favorite-btn').forEach(button => {
+			button.addEventListener('click', function() {
+				button.classList.toggle('favorite-btn--active');
+			});
+		});
+	</script>
 </body>
 
 </html>

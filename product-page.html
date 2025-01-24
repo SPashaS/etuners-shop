@@ -43,15 +43,20 @@
 							</div>
 						</div>
 
-						<a href="#" class="header__action ">
+						<a href="#" class="header__action">
 							<div class="cart-icon  _icon-cart">
 								<span class="cart-icon__num">10</span>
 							</div>
 						</a>
 
-						<a href="#" class="header__action ">
+						<a href="#" class="header__action">
 							<div class="acc-icon _icon-acc"></div>
 						</a>
+
+						<a href="#" class="header__action">
+							<div class="favourite-icon _icon-favourite"></div>
+						</a>
+
 					</div>
 
 
@@ -225,11 +230,19 @@
 						</div> -->
 					</div>
 					<div class="product__body">
-						<h1 class="product__title">Etuners 19861005 Катушказажигания, высокопроизводительная, длядвигателей MQB.</h1>
+						<h1 class="product__title">Etuners 19861005 Катушказажигания, высокопроизводительная, длядвигателей MQB.
+						</h1>
 						<div class="product__article">Артикул: <b>19860510</b></div>
 						<div class="product__made">Производитель: <b>Etuners</b></div>
 						<div class="product__price price">5500</div>
 						<div class="product__btns">
+
+							<select class="product__select">
+								<option value="1" selected>-- Choose ADD HPFP ASSEMBLY TOOL? --</option>
+								<option value="2">Yes please [+1200 р]</option>
+								<option value="3">No thanks, I already have one</option>
+							</select>
+
 							<div class="quantity">
 								<button type="button" class="quantity__button quantity__button_minus"></button>
 								<div class="quantity__input">
@@ -240,8 +253,14 @@
 							<div class="product__stockstatus">
 								В наличии
 							</div>
-							<button class="product__btn btn" type="button">Купить</button>
-
+							<div class="product__btns-row">
+								<button class="product__btn btn" type="button">Купить</button>
+								<button class="product__favorite-btn favorite-btn" type="button" aria-label="Добавить в избранное">
+									<svg class="favorite-btn__icon" width="19" height="19" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+									</svg>
+								</button>
+							</div>
 
 						</div>
 
@@ -288,84 +307,230 @@
 					</div>
 				</div>
 
-				<!-- <div class="page__carousel carousel carousel--1">
+				<div class="page__carousel carousel carousel--1">
 					<h2 class="carousel__title">
-						Самые покупаемые товары
+						Рекомендуемые
 					</h2>
 					<div class="carousel__body">
 						<div class="carousel__slider">
 							<div class="carousel__swiper">
 
 								<div class="carousel__slide">
-									<a href="#" class="carousel-card">
-										<div class="carousel-card__img-ibg">
+									<div class="card">
+										<a href="#" class="card__img-ibg card__img-ibg_contain">
 											<picture><source srcset="img/shop/product/1.webp" type="image/webp"><img src="img/shop/product/1.jpg" alt></picture>
+										</a>
+										<div class="card__row">
+											<span class="card__price price">3300</span>
+											<button class="card__favorite-btn favorite-btn" type="button" aria-label="Добавить в избранное">
+												<svg class="favorite-btn__icon" width="19" height="19" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+												</svg>
+											</button>
+											<button class="card__cart _icon-cart" type="button" aria-label="Добавить в корзину"></button>
 										</div>
-										<div class="carousel-card__title">
-											Bosch EV-14 1000cc 95lb Standard Length (Set of 4)
-										</div>
-									</a>
+										<a href="#" class="card__title">Адаптер для двух насосов в топливную станцию MQB</a>
+									</div>
 								</div>
 								<div class="carousel__slide">
-									<a href="#" class="carousel-card">
-										<div class="carousel-card__img-ibg">
+									<div class="card">
+										<a href="#" class="card__img-ibg card__img-ibg_contain">
+											<picture><source srcset="img/shop/product/5.webp" type="image/webp"><img src="img/shop/product/5.jpg" alt></picture>
+										</a>
+										<div class="card__row">
+											<span class="card__price price">3300</span>
+											<button class="card__favorite-btn favorite-btn" type="button" aria-label="Добавить в избранное">
+												<svg class="favorite-btn__icon" width="19" height="19" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+												</svg>
+											</button>
+											<button class="card__cart _icon-cart" type="button" aria-label="Добавить в корзину"></button>
+										</div>
+										<a href="#" class="card__title">Комплект насос тннд от 900лс</a>
+									</div>
+								</div>
+								<div class="carousel__slide">
+									<div class="card">
+										<a href="#" class="card__img-ibg card__img-ibg_contain">
+											<picture><source srcset="img/shop/product/6.webp" type="image/webp"><img src="img/shop/product/6.jpg" alt></picture>
+										</a>
+										<div class="card__row">
+											<span class="card__price price">3300</span>
+											<button class="card__favorite-btn favorite-btn" type="button" aria-label="Добавить в избранное">
+												<svg class="favorite-btn__icon" width="19" height="19" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+												</svg>
+											</button>
+											<button class="card__cart _icon-cart" type="button" aria-label="Добавить в корзину"></button>
+										</div>
+										<a href="#" class="card__title">Быстро съемный алюминиевый хомут.</a>
+									</div>
+								</div>
+								<div class="carousel__slide">
+									<div class="card">
+										<a href="#" class="card__img-ibg card__img-ibg_contain">
+											<picture><source srcset="img/shop/product/7.webp" type="image/webp"><img src="img/shop/product/7.jpg" alt></picture>
+										</a>
+										<div class="card__row">
+											<span class="card__price price">15000</span>
+											<button class="card__favorite-btn favorite-btn" type="button" aria-label="Добавить в избранное">
+												<svg class="favorite-btn__icon" width="19" height="19" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+												</svg>
+											</button>
+											<button class="card__cart _icon-cart" type="button" aria-label="Добавить в корзину"></button>
+										</div>
+										<a href="#" class="card__title">Рейка топливная 1.8-2.0 MQB</a>
+									</div>
+								</div>
+								<div class="carousel__slide">
+									<div class="card">
+										<a href="#" class="card__img-ibg card__img-ibg_contain">
 											<picture><source srcset="img/shop/product/2.webp" type="image/webp"><img src="img/shop/product/2.jpg" alt></picture>
+										</a>
+										<div class="card__row">
+											<span class="card__price price">3300</span>
+											<button class="card__favorite-btn favorite-btn" type="button" aria-label="Добавить в избранное">
+												<svg class="favorite-btn__icon" width="19" height="19" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+												</svg>
+											</button>
+											<button class="card__cart _icon-cart" type="button" aria-label="Добавить в корзину"></button>
 										</div>
-										<div class="carousel-card__title">
-											Walbro 450lph E85 High-Pressure In-tank Fuel Pump
-										</div>
-									</a>
+										<a href="#" class="card__title">Адаптер для двух насосов в топливную станцию MQB</a>
+									</div>
 								</div>
 								<div class="carousel__slide">
-									<a href="#" class="carousel-card">
-										<div class="carousel-card__img-ibg">
+									<div class="card">
+										<a href="#" class="card__img-ibg card__img-ibg_contain">
+											<picture><source srcset="img/shop/product/5.webp" type="image/webp"><img src="img/shop/product/5.jpg" alt></picture>
+										</a>
+										<div class="card__row">
+											<span class="card__price price">3300</span>
+											<button class="card__favorite-btn favorite-btn" type="button" aria-label="Добавить в избранное">
+												<svg class="favorite-btn__icon" width="19" height="19" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+												</svg>
+											</button>
+											<button class="card__cart _icon-cart" type="button" aria-label="Добавить в корзину"></button>
+										</div>
+										<a href="#" class="card__title">Комплект насос тннд от 900лс</a>
+									</div>
+								</div>
+								<div class="carousel__slide">
+									<div class="card">
+										<a href="#" class="card__img-ibg card__img-ibg_contain">
+											<picture><source srcset="img/shop/product/6.webp" type="image/webp"><img src="img/shop/product/6.jpg" alt></picture>
+										</a>
+										<div class="card__row">
+											<span class="card__price price">3300</span>
+											<button class="card__favorite-btn favorite-btn" type="button" aria-label="Добавить в избранное">
+												<svg class="favorite-btn__icon" width="19" height="19" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+												</svg>
+											</button>
+											<button class="card__cart _icon-cart" type="button" aria-label="Добавить в корзину"></button>
+										</div>
+										<a href="#" class="card__title">Быстро съемный алюминиевый хомут.</a>
+									</div>
+								</div>
+								<div class="carousel__slide">
+									<div class="card">
+										<a href="#" class="card__img-ibg card__img-ibg_contain">
+											<picture><source srcset="img/shop/product/7.webp" type="image/webp"><img src="img/shop/product/7.jpg" alt></picture>
+										</a>
+										<div class="card__row">
+											<span class="card__price price">15000</span>
+											<button class="card__favorite-btn favorite-btn" type="button" aria-label="Добавить в избранное">
+												<svg class="favorite-btn__icon" width="19" height="19" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+												</svg>
+											</button>
+											<button class="card__cart _icon-cart" type="button" aria-label="Добавить в корзину"></button>
+										</div>
+										<a href="#" class="card__title">Рейка топливная 1.8-2.0 MQB</a>
+									</div>
+								</div>
+
+
+							</div>
+						</div>
+						<div class="carousel__nav">
+							<button class="carousel__btn carousel__btn_prev _icon-arrow-rg" type="button" aria-label="Prev slide"></button>
+							<button class="carousel__btn carousel__btn_next _icon-arrow-rg" type="button" aria-label="Next slide"></button>
+						</div>
+					</div>
+				</div>
+
+				<div class="page__carousel carousel carousel--2">
+					<h2 class="carousel__title">
+						просмотренные
+					</h2>
+					<div class="carousel__body">
+						<div class="carousel__slider">
+							<div class="carousel__swiper">
+
+								<div class="carousel__slide">
+									<div class="card">
+										<a href="#" class="card__img-ibg card__img-ibg_contain">
 											<picture><source srcset="img/shop/product/3.webp" type="image/webp"><img src="img/shop/product/3.jpg" alt></picture>
+										</a>
+										<div class="card__row">
+											<span class="card__price price">3300</span>
+											<button class="card__favorite-btn favorite-btn" type="button" aria-label="Добавить в избранное">
+												<svg class="favorite-btn__icon" width="19" height="19" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+												</svg>
+											</button>
+											<button class="card__cart _icon-cart" type="button" aria-label="Добавить в корзину"></button>
 										</div>
-										<div class="carousel-card__title">
-											SNOW Stage 2 Boost Cooler Forced Induction Progressive Engine Mount Water-Methanol Injection Kit
-											(Red High Temp Nylon Tubing, Quick-Connect Fittings)
-										</div>
-									</a>
+										<a href="#" class="card__title">Адаптер для двух насосов в топливную станцию MQB</a>
+									</div>
 								</div>
 								<div class="carousel__slide">
-									<a href="#" class="carousel-card">
-										<div class="carousel-card__img-ibg">
-											<picture><source srcset="img/shop/product/4.webp" type="image/webp"><img src="img/shop/product/4.jpg" alt></picture>
+									<div class="card">
+										<a href="#" class="card__img-ibg card__img-ibg_contain">
+											<picture><source srcset="img/shop/product/5.webp" type="image/webp"><img src="img/shop/product/5.jpg" alt></picture>
+										</a>
+										<div class="card__row">
+											<span class="card__price price">3300</span>
+											<button class="card__favorite-btn favorite-btn" type="button" aria-label="Добавить в избранное">
+												<svg class="favorite-btn__icon" width="19" height="19" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+												</svg>
+											</button>
+											<button class="card__cart _icon-cart" type="button" aria-label="Добавить в корзину"></button>
 										</div>
-										<div class="carousel-card__title">
-											Walbro 450lph E85 High-Pressure In-tank Fuel
-										</div>
-									</a>
+										<a href="#" class="card__title">Комплект насос тннд от 900лс</a>
+									</div>
 								</div>
 								<div class="carousel__slide">
-									<a href="#" class="carousel-card">
-										<div class="carousel-card__img-ibg">
-											<picture><source srcset="img/shop/product/2.webp" type="image/webp"><img src="img/shop/product/2.jpg" alt></picture>
+									<div class="card">
+										<a href="#" class="card__img-ibg card__img-ibg_contain">
+											<picture><source srcset="img/shop/product/6.webp" type="image/webp"><img src="img/shop/product/6.jpg" alt></picture>
+										</a>
+										<div class="card__row">
+											<span class="card__price price">3300</span>
+											<button class="card__favorite-btn favorite-btn" type="button" aria-label="Добавить в избранное">
+												<svg class="favorite-btn__icon" width="19" height="19" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+												</svg>
+											</button>
+											<button class="card__cart _icon-cart" type="button" aria-label="Добавить в корзину"></button>
 										</div>
-										<div class="carousel-card__title">
-											Bosch EV-14 1000cc 95lb Standard Length (Set of 4)
-										</div>
-									</a>
-								</div>
-								<div class="carousel__slide">
-									<a href="#" class="carousel-card">
-										<div class="carousel-card__img-ibg">
-											<picture><source srcset="img/shop/product/3.webp" type="image/webp"><img src="img/shop/product/3.jpg" alt></picture>
-										</div>
-										<div class="carousel-card__title">
-											Walbro 450lph E85 High-Pressure
-										</div>
-									</a>
+										<a href="#" class="card__title">Быстро съемный алюминиевый хомут.</a>
+									</div>
 								</div>
 
 							</div>
 						</div>
 						<div class="carousel__nav">
-							<button class="carousel__btn carousel__btn_prev _icon-arr" type="button" aria-label="Prev slide"></button>
-							<button class="carousel__btn carousel__btn_next _icon-arr" type="button" aria-label="Next slide"></button>
+							<button class="carousel__btn carousel__btn_prev _icon-arrow-rg" type="button" aria-label="Prev slide"></button>
+							<button class="carousel__btn carousel__btn_next _icon-arrow-rg" type="button" aria-label="Next slide"></button>
 						</div>
 					</div>
-				</div> -->
+				</div>
+
 
 			</div>
 		</main>
@@ -512,29 +677,16 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20250123232048"></script>
-	<!-- <script>
-  window.addEventListener("load", function (e) {
-    const filter = document.querySelector('#filter');
-    window.scrollTo({
-    top: filter.getBoundingClientRect().top - 15,
-    left: 0,
-    behavior: "instant"
-    });
-  })
-</script>-->
-	<script>
-		// 	setTimeout(function () {
-		// 	  const bodyEl = document.body;
-		//     console.log('tut');
-		//     let tempButton = document.createElement("button");
-		//     tempButton.dataset.popup = "#order-call-thanks";
-		//     bodyEl.append(tempButton);
-		//     tempButton.click();
-		//     tempButton.remove();
-		// }, 500);
-	</script>
+	<script src="js/app.min.js?_v=20250124233602"></script>
 
+	<script>
+		// избранное
+		document.querySelectorAll('.favorite-btn').forEach(button => {
+			button.addEventListener('click', function() {
+				button.classList.toggle('favorite-btn--active');
+			});
+		});
+	</script>
 </body>
 
 </html>

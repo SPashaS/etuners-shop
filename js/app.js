@@ -771,10 +771,7 @@
     getSelectTitleValue(e, t) {
       let s = this.getSelectedOptionsData(t, 2).html;
       if (
-        (window.matchMedia("(min-width: 992px)").matches &&
-          s[0].length > 6 &&
-          (s[0] = `${s[0].slice(0, 6)}...`),
-        t.multiple &&
+        (t.multiple &&
           t.hasAttribute("data-tags") &&
           ((s = this.getSelectedOptionsData(t)
             .elements.map(
@@ -4923,7 +4920,7 @@
       document.querySelector(".carousel--1") &&
         new de(".carousel--1 .carousel__slider", {
           modules: [pe],
-          slidesPerView: 6,
+          slidesPerView: 4,
           spaceBetween: 20,
           speed: 800,
           navigation: {
@@ -4931,17 +4928,17 @@
             nextEl: ".carousel--1 .carousel__btn_next",
           },
           breakpoints: {
-            0: { slidesPerView: 1, spaceBetween: 20 },
-            768: { slidesPerView: 2 },
+            0: { slidesPerView: 1.4, spaceBetween: 20, centeredSlides: !0 },
+            768: { slidesPerView: 2, centeredSlides: !1 },
             992: { slidesPerView: 4 },
-            1366: { slidesPerView: 6 },
+            1366: { slidesPerView: 4 },
           },
           on: {},
         }),
       document.querySelector(".carousel--2") &&
         new de(".carousel--2 .carousel__slider", {
           modules: [pe],
-          slidesPerView: 6,
+          slidesPerView: 4,
           spaceBetween: 20,
           speed: 800,
           navigation: {
@@ -4949,10 +4946,10 @@
             nextEl: ".carousel--2 .carousel__btn_next",
           },
           breakpoints: {
-            0: { slidesPerView: 1, spaceBetween: 20 },
-            768: { slidesPerView: 2 },
+            0: { slidesPerView: 1.4, spaceBetween: 20, centeredSlides: !0 },
+            768: { slidesPerView: 2, centeredSlides: !1 },
             992: { slidesPerView: 4 },
-            1366: { slidesPerView: 6 },
+            1366: { slidesPerView: 4 },
           },
           on: {},
         });
