@@ -1204,14 +1204,14 @@
       return t;
     }
   }
-  function M(e, t) {
+  function P(e, t) {
     const s = [];
     let i = e.parentElement;
     for (; i; )
       t ? i.matches(t) && s.push(i) : s.push(i), (i = i.parentElement);
     return s;
   }
-  function P(e, t, s) {
+  function M(e, t, s) {
     const i = b();
     return s
       ? e["width" === t ? "offsetWidth" : "offsetHeight"] +
@@ -1596,7 +1596,7 @@
               o && (l.style.webkitTransform = "none"),
               i.roundLengths)
             )
-              L = e.isHorizontal() ? P(l, "width", !0) : P(l, "height", !0);
+              L = e.isHorizontal() ? M(l, "width", !0) : M(l, "height", !0);
             else {
               const e = s(a, "width"),
                 t = s(a, "padding-left"),
@@ -4238,7 +4238,7 @@
         let o, d, u;
         if (
           (s.dynamicBullets &&
-            ((a = P(n[0], t.isHorizontal() ? "width" : "height", !0)),
+            ((a = M(n[0], t.isHorizontal() ? "width" : "height", !0)),
             p.forEach((e) => {
               e.style[t.isHorizontal() ? "width" : "height"] =
                 a * (s.dynamicMainBullets + 4) + "px";
@@ -4410,7 +4410,7 @@
             s.length > 1 &&
             ((s = [...t.el.querySelectorAll(e.el)]),
             s.length > 1 &&
-              (s = s.filter((e) => M(e, ".swiper")[0] === t.el)[0])),
+              (s = s.filter((e) => P(e, ".swiper")[0] === t.el)[0])),
           Array.isArray(s) && 1 === s.length && (s = s[0]),
           Object.assign(t.pagination, { el: s }),
           (s = o(s)),
@@ -4830,7 +4830,7 @@
           i("init", () => {
             if (t.params.observer) {
               if (t.params.observeParents) {
-                const e = M(t.hostEl);
+                const e = P(t.hostEl);
                 for (let t = 0; t < e.length; t += 1) r(e[t]);
               }
               r(t.hostEl, { childList: t.params.observeSlideChildren }),
@@ -4952,6 +4952,24 @@
             1366: { slidesPerView: 4 },
           },
           on: {},
+        }),
+      document.querySelector(".carousel--3") &&
+        new de(".carousel--3 .carousel__slider", {
+          modules: [pe],
+          slidesPerView: 4,
+          spaceBetween: 20,
+          speed: 800,
+          navigation: {
+            prevEl: ".carousel--3 .carousel__btn_prev",
+            nextEl: ".carousel--3 .carousel__btn_next",
+          },
+          breakpoints: {
+            0: { slidesPerView: 2, spaceBetween: 20 },
+            768: { slidesPerView: 2, centeredSlides: !1 },
+            992: { slidesPerView: 4 },
+            1366: { slidesPerView: 4 },
+          },
+          on: {},
         });
   });
   var ve = function () {
@@ -4980,8 +4998,8 @@
     Oe = "lgAfterSlide",
     Ae = "lgPosterClick",
     _e = "lgDragStart",
-    Me = "lgDragMove",
-    Pe = "lgDragEnd",
+    Pe = "lgDragMove",
+    Me = "lgDragEnd",
     ke = "lgBeforeNextSlide",
     ze = "lgBeforePrevSlide",
     De = "lgBeforeClose",
@@ -6814,13 +6832,13 @@
                 ((n = !0),
                 (s = { pageX: l.pageX, pageY: l.pageY }),
                 e.touchMove(t, s),
-                e.LGel.trigger(Me));
+                e.LGel.trigger(Pe));
             }),
             Fe(window).on("mouseup.lg.global" + this.lgId, function (l) {
               if (e.lgOpened) {
                 var a = Fe(l.target);
                 n
-                  ? ((n = !1), e.touchEnd(s, t, l), e.LGel.trigger(Pe))
+                  ? ((n = !1), e.touchEnd(s, t, l), e.LGel.trigger(Me))
                   : e.isPosterElement(a) && e.LGel.trigger(Ae),
                   i &&
                     ((i = !1),

@@ -16,15 +16,22 @@
 @font-face {
   font-family: Montserrat;
   font-display: swap;
-  src: url("../fonts/Montserrat-Light.woff2") format("woff2"), url("../fonts/Montserrat-Light.woff") format("woff");
-  font-weight: 300;
+  src: url("../fonts/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: Montserrat;
   font-display: swap;
-  src: url("../fonts/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat-Medium.woff") format("woff");
-  font-weight: 500;
+  src: url("../fonts/Montserrat-Light.woff2") format("woff2"), url("../fonts/Montserrat-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: OpenSans;
+  font-display: swap;
+  src: url("../fonts/OpenSans-Regular.woff2") format("woff2"), url("../fonts/OpenSans-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 @font-face {
@@ -116,6 +123,7 @@
   --accent-color: #3B5998;
   --btn-color: #EBF1FC;
   --btn-color-hover: rgba(55, 113, 200, 1);
+  --second-font: "OpenSans", sans-serif;
 }
 
 * {
@@ -870,8 +878,8 @@ h4 {
 }
 
 .price {
-  font-family: var(--ff-second);
-  font-weight: 700;
+  font-family: var(--second-font);
+  color: #16264b;
 }
 .price::after {
   content: " р";
@@ -933,6 +941,7 @@ h4 {
   width: 100%;
   padding-bottom: 131%;
   position: relative;
+  border: 3px solid var(--accent-color);
 }
 .card__row {
   display: flex;
@@ -943,6 +952,7 @@ h4 {
   position: relative;
 }
 .card__price {
+  font-family: var(--second-font);
   flex-grow: 1;
 }
 @media (min-width: 479.98px) {
@@ -2884,6 +2894,9 @@ h4 {
   .carousel__slider {
     margin: 0;
   }
+}
+.carousel--3 .carousel__slider {
+  margin: 0;
 }
 .carousel__nav {
   display: none;
