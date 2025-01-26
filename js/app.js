@@ -50,6 +50,18 @@
               e.forEach((e) => e.classList.remove("custom-select--open"));
           });
       });
+    }),
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll(".product__switch-input").forEach((e) => {
+        e.addEventListener("change", (e) => {
+          const t = e.target.closest(".product__item"),
+            s = t.querySelector(".product__price"),
+            i = t.querySelector(".product__price-extra"),
+            n = parseInt(s.dataset.basePrice, 10),
+            r = parseInt(i.dataset.price, 10);
+          e.target.checked ? (s.textContent = n + r) : (s.textContent = n);
+        });
+      });
     });
   let n = (e, t = 500, s = 0) => {
       e.classList.contains("_slide") ||
@@ -730,10 +742,10 @@
     var s;
     return e;
   }
-  function T(e, t, s) {
+  function C(e, t, s) {
     e.style.setProperty(t, s);
   }
-  function C(e) {
+  function T(e) {
     let { swiper: t, targetPosition: s, side: i } = e;
     const n = y(),
       r = -t.translate;
@@ -792,7 +804,7 @@
       t ? i.matches(t) && s.push(i) : s.push(i), (i = i.parentElement);
     return s;
   }
-  function A(e, t, s) {
+  function _(e, t, s) {
     const i = y();
     return s
       ? e["width" === t ? "offsetWidth" : "offsetHeight"] +
@@ -810,11 +822,11 @@
           )
       : e.offsetWidth;
   }
-  let _, k, z;
+  let A, k, z;
   function D() {
     return (
-      _ ||
-        (_ = (function () {
+      A ||
+        (A = (function () {
           const e = y(),
             t = f();
           return {
@@ -828,7 +840,7 @@
             ),
           };
         })()),
-      _
+      A
     );
   }
   function G(e) {
@@ -1148,11 +1160,11 @@
         }),
         i.centeredSlides &&
           i.cssMode &&
-          (T(n, "--swiper-centered-offset-before", ""),
-          T(n, "--swiper-centered-offset-after", ""));
-      const C = i.grid && i.grid.rows > 1 && e.grid;
+          (C(n, "--swiper-centered-offset-before", ""),
+          C(n, "--swiper-centered-offset-after", ""));
+      const T = i.grid && i.grid.rows > 1 && e.grid;
       let L;
-      C && e.grid.initSlides(u);
+      T && e.grid.initSlides(u);
       const P =
         "auto" === i.slidesPerView &&
         i.breakpoints &&
@@ -1164,7 +1176,7 @@
         if (
           ((L = 0),
           p[n] && (r = p[n]),
-          C && e.grid.updateSlide(n, r, u, t),
+          T && e.grid.updateSlide(n, r, u, t),
           !p[n] || "none" !== M(r, "display"))
         ) {
           if ("auto" === i.slidesPerView) {
@@ -1177,7 +1189,7 @@
               l && (r.style.webkitTransform = "none"),
               i.roundLengths)
             )
-              L = e.isHorizontal() ? A(r, "width", !0) : A(r, "height", !0);
+              L = e.isHorizontal() ? _(r, "width", !0) : _(r, "height", !0);
             else {
               const e = s(o, "width"),
                 t = s(o, "padding-left"),
@@ -1226,7 +1238,7 @@
           ("slide" === i.effect || "coverflow" === i.effect) &&
           (n.style.width = `${e.virtualSize + w}px`),
         i.setWrapperSize && (n.style[t("width")] = `${e.virtualSize + w}px`),
-        C && e.grid.updateWrapperSize(L, h, t),
+        T && e.grid.updateWrapperSize(L, h, t),
         !i.centeredSlides)
       ) {
         const t = [];
@@ -1302,8 +1314,8 @@
         }),
         i.centeredSlides && i.cssMode && !i.centeredSlidesBounds)
       ) {
-        T(n, "--swiper-centered-offset-before", -h[0] + "px"),
-          T(
+        C(n, "--swiper-centered-offset-before", -h[0] + "px"),
+          C(
             n,
             "--swiper-centered-offset-after",
             e.size / 2 - m[m.length - 1] / 2 + "px",
@@ -1674,7 +1686,7 @@
         else {
           if (!r.support.smoothScroll)
             return (
-              C({ swiper: r, targetPosition: -c, side: e ? "left" : "top" }), !0
+              T({ swiper: r, targetPosition: -c, side: e ? "left" : "top" }), !0
             );
           a.scrollTo({ [e ? "left" : "top"]: -c, behavior: "smooth" });
         }
@@ -1819,7 +1831,7 @@
         } else {
           if (!r.support.smoothScroll)
             return (
-              C({ swiper: r, targetPosition: s, side: e ? "left" : "top" }), !0
+              T({ swiper: r, targetPosition: s, side: e ? "left" : "top" }), !0
             );
           h.scrollTo({ [e ? "left" : "top"]: s, behavior: "smooth" });
         }
@@ -2432,9 +2444,9 @@
       (i.isMoved = !0),
       (i.currentTranslate = m + i.startTranslate);
     let x = !0,
-      T = n.resistanceRatio;
+      C = n.resistanceRatio;
     if (
-      (n.touchReleaseOnEdges && (T = 0),
+      (n.touchReleaseOnEdges && (C = 0),
       m > 0
         ? (b &&
             S &&
@@ -2454,7 +2466,7 @@
               (i.currentTranslate =
                 s.minTranslate() -
                 1 +
-                (-s.minTranslate() + i.startTranslate + m) ** T)))
+                (-s.minTranslate() + i.startTranslate + m) ** C)))
         : m < 0 &&
           (b &&
             S &&
@@ -2478,7 +2490,7 @@
               (i.currentTranslate =
                 s.maxTranslate() +
                 1 -
-                (s.maxTranslate() - i.startTranslate - m) ** T))),
+                (s.maxTranslate() - i.startTranslate - m) ** C))),
       x && (l.preventedByNestedSwiper = !0),
       !s.allowSlideNext &&
         "next" === s.swipeDirection &&
@@ -3819,7 +3831,7 @@
         let l, d, u;
         if (
           (s.dynamicBullets &&
-            ((o = A(n[0], t.isHorizontal() ? "width" : "height", !0)),
+            ((o = _(n[0], t.isHorizontal() ? "width" : "height", !0)),
             p.forEach((e) => {
               e.style[t.isHorizontal() ? "width" : "height"] =
                 o * (s.dynamicMainBullets + 4) + "px";
@@ -4160,7 +4172,7 @@
         !i.destroyed &&
         i.wrapperEl &&
         e.target === i.wrapperEl &&
-        (i.wrapperEl.removeEventListener("transitionend", b), C());
+        (i.wrapperEl.removeEventListener("transitionend", b), T());
     }
     const w = () => {
         if (i.destroyed || !i.autoplay.running) return;
@@ -4236,14 +4248,14 @@
           cancelAnimationFrame(s),
           o("autoplayStop");
       },
-      T = (e, s) => {
+      C = (e, s) => {
         if (i.destroyed || !i.autoplay.running) return;
         clearTimeout(t), e || (g = !0);
         const n = () => {
           o("autoplayPause"),
             i.params.autoplay.waitForTransition
               ? i.wrapperEl.addEventListener("transitionend", b)
-              : C();
+              : T();
         };
         if (((i.autoplay.paused = !0), s))
           return h && (l = i.params.autoplay.delay), (h = !1), void n();
@@ -4251,7 +4263,7 @@
         (l = r - (new Date().getTime() - y)),
           (i.isEnd && l < 0 && !i.params.loop) || (l < 0 && (l = 0), n());
       },
-      C = () => {
+      T = () => {
         (i.isEnd && l < 0 && !i.params.loop) ||
           i.destroyed ||
           !i.autoplay.running ||
@@ -4263,15 +4275,15 @@
       I = () => {
         if (i.destroyed || !i.autoplay.running) return;
         const e = f();
-        "hidden" === e.visibilityState && ((g = !0), T(!0)),
-          "visible" === e.visibilityState && C();
+        "hidden" === e.visibilityState && ((g = !0), C(!0)),
+          "visible" === e.visibilityState && T();
       },
       L = (e) => {
         "mouse" === e.pointerType &&
-          ((g = !0), i.animating || i.autoplay.paused || T(!0));
+          ((g = !0), i.animating || i.autoplay.paused || C(!0));
       },
       M = (e) => {
-        "mouse" === e.pointerType && i.autoplay.paused && C();
+        "mouse" === e.pointerType && i.autoplay.paused && T();
       };
     r("init", () => {
       i.params.autoplay.enabled &&
@@ -4291,7 +4303,7 @@
       r("beforeTransitionStart", (e, t, s) => {
         !i.destroyed &&
           i.autoplay.running &&
-          (s || !i.params.autoplay.disableOnInteraction ? T(!0, !0) : x());
+          (s || !i.params.autoplay.disableOnInteraction ? C(!0, !0) : x());
       }),
       r("sliderFirstMove", () => {
         !i.destroyed &&
@@ -4302,7 +4314,7 @@
               (p = !1),
               (g = !1),
               (u = setTimeout(() => {
-                (g = !0), (p = !0), T(!0);
+                (g = !0), (p = !0), C(!0);
               }, 200))));
       }),
       r("touchEnd", () => {
@@ -4313,13 +4325,13 @@
             i.params.autoplay.disableOnInteraction)
           )
             return (p = !1), void (c = !1);
-          p && i.params.cssMode && C(), (p = !1), (c = !1);
+          p && i.params.cssMode && T(), (p = !1), (c = !1);
         }
       }),
       r("slideChange", () => {
         !i.destroyed && i.autoplay.running && (h = !0);
       }),
-      Object.assign(i.autoplay, { start: E, stop: x, pause: T, resume: C });
+      Object.assign(i.autoplay, { start: E, stop: x, pause: C, resume: T });
   }
   function ge() {
     let e = document.querySelectorAll(
@@ -4556,15 +4568,15 @@
     Se = "lgUpdateSlides",
     Ee = "lgAfterAppendSubHtml",
     xe = "lgBeforeOpen",
-    Te = "lgAfterOpen",
-    Ce = "lgSlideItemLoad",
+    Ce = "lgAfterOpen",
+    Te = "lgSlideItemLoad",
     Ie = "lgBeforeSlide",
     Le = "lgAfterSlide",
     Me = "lgPosterClick",
     Pe = "lgDragStart",
     Oe = "lgDragMove",
-    Ae = "lgDragEnd",
-    _e = "lgBeforeNextSlide",
+    _e = "lgDragEnd",
+    Ae = "lgBeforeNextSlide",
     ke = "lgBeforePrevSlide",
     ze = "lgBeforeClose",
     De = "lgAfterClose",
@@ -5661,7 +5673,7 @@
                       s.outer.addClass("lg-visible");
                     }, s.settings.backdropDuration),
                   s.slide(e, !1, !1, !1),
-                  s.LGel.trigger(Te);
+                  s.LGel.trigger(Ce);
               }),
               document.body === this.settings.container &&
                 $e("html").addClass("lg-on");
@@ -5866,7 +5878,7 @@
             a = n && "video" === this.getSlideType(o) && !o.poster ? i : 0;
           setTimeout(function () {
             e.addClass("lg-complete lg-complete_"),
-              r.LGel.trigger(Ce, { index: t, delay: s || 0, isFirstSlide: n });
+              r.LGel.trigger(Te, { index: t, delay: s || 0, isFirstSlide: n });
           }, a);
         }),
         (e.prototype.isFirstSlideWithZoomAnimation = function () {
@@ -5952,8 +5964,8 @@
               E = '<div class="lg-video-cont " style="' + g + '"></div>';
               n.prepend(E);
             } else if ((this.setImgMarkup(d, n, e), o || l)) {
-              var T = n.find(".lg-object");
-              this.initPictureFill(T);
+              var C = n.find(".lg-object");
+              this.initPictureFill(C);
             }
             (r || h) &&
               this.LGel.trigger(be, {
@@ -5967,8 +5979,8 @@
                 ".lg-item" === this.settings.appendSubHtmlTo &&
                 this.addHtml(e);
           }
-          var C = 0;
-          v && !$e(document.body).hasClass("lg-from-hash") && (C = v),
+          var T = 0;
+          v && !$e(document.body).hasClass("lg-from-hash") && (T = v),
             this.isFirstSlideWithZoomAnimation() &&
               (setTimeout(function () {
                 n.removeClass(
@@ -5992,22 +6004,22 @@
                   }
                   ("image" === s.getSlideType(i) ||
                     ("video" === s.getSlideType(i) && r)) &&
-                    (s.onLgObjectLoad(n, e, v, C, !0, !1),
+                    (s.onLgObjectLoad(n, e, v, T, !0, !1),
                     s.onSlideObjectLoad(
                       n,
                       !(!h || !h.html5 || r),
                       function () {
-                        s.loadContentOnFirstSlideLoad(e, n, C);
+                        s.loadContentOnFirstSlideLoad(e, n, T);
                       },
                       function () {
-                        s.loadContentOnFirstSlideLoad(e, n, C);
+                        s.loadContentOnFirstSlideLoad(e, n, T);
                       },
                     ));
                 }, this.settings.startAnimationDuration + 100)),
             n.addClass("lg-loaded"),
             (this.isFirstSlideWithZoomAnimation() &&
               ("video" !== this.getSlideType(i) || r)) ||
-              this.onLgObjectLoad(n, e, v, C, f, !(!h || !h.html5 || r)),
+              this.onLgObjectLoad(n, e, v, T, f, !(!h || !h.html5 || r)),
             (this.zoomFromOrigin && this.currentImageSize) ||
               !n.hasClass("lg-complete_") ||
               this.lGalleryOn ||
@@ -6402,7 +6414,7 @@
               if (e.lgOpened) {
                 var o = $e(r.target);
                 n
-                  ? ((n = !1), e.touchEnd(s, t, r), e.LGel.trigger(Ae))
+                  ? ((n = !1), e.touchEnd(s, t, r), e.LGel.trigger(_e))
                   : e.isPosterElement(o) && e.LGel.trigger(Me),
                   i &&
                     ((i = !1),
@@ -6439,11 +6451,11 @@
             this.lgBusy ||
               (this.index + 1 < this.galleryItems.length
                 ? (this.index++,
-                  this.LGel.trigger(_e, { index: this.index }),
+                  this.LGel.trigger(Ae, { index: this.index }),
                   this.slide(this.index, !!e, !1, "next"))
                 : s
                 ? ((this.index = 0),
-                  this.LGel.trigger(_e, { index: this.index }),
+                  this.LGel.trigger(Ae, { index: this.index }),
                   this.slide(this.index, !!e, !1, "next"))
                 : this.settings.slideEndAnimation &&
                   !e &&
