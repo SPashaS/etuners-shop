@@ -231,7 +231,7 @@
 					</div>
 					<div class="product__body">
 
-						<h1 class="product__title">Etuners 19861005 Катушказажигания, высокопроизводительная, длядвигателей MQB.
+						<h1 class="product__title">Etuners 19861005 Катушка зажигания, высокопроизводительная, для двигателей MQB.
 						</h1>
 						<div class="product__article">Артикул: <b>19860510</b></div>
 						<div class="product__made">Производитель: <b>Etuners</b></div>
@@ -242,11 +242,67 @@
 									<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
 								</svg>
 							</button>
-							<select class="product__select">
-								<option value="1" selected>Комплектный товар?</option>
-								<option value="2">Свечи зажигания Gen3 NGK (12000 р) </option>
-								<option value="3">Нет, спасибо!</option>
+							<!-- <select class="product__select">
+								<option value="1">Добавить cвечи зажигания Gen3 NGK (12000 р)</option>
+								<option value="2">Нет, спасибо!</option>
 							</select>
+
+							<select class="product__select-2">
+								<option value="1">Добавить cвечи зажигания Gen3 NGK <span>[12000 р]</span></option>
+								<option value="2">Нет, спасибо!</option>
+							</select>
+
+							<select class="product__select-3">
+								<option value="1">Добавить cвечи зажигания Gen3 NGK (12000 р)</option>
+								<option value="2">Нет, спасибо!</option>
+							</select> -->
+
+							<div class="custom-select product__select" data-select>
+								<div class="custom-select__trigger" data-select-trigger>Добавить свечи зажигания Gen3 NGK (12000 р)
+								</div>
+								<ul class="custom-select__options" data-select-options>
+									<li class="custom-select__option" data-value="1">
+										Добавить свечи зажигания Gen3 NGK (12000 р)
+									</li>
+									<li class="custom-select__option" data-value="2">Нет, спасибо!</li>
+								</ul>
+							</div>
+
+							<div class="custom-select product__select custom-select_2" data-select>
+								<div class="custom-select__trigger" data-select-trigger>
+									<p>
+										Добавить свечи зажигания Gen3 NGK <span>[12000 р]</span>
+									</p>
+
+								</div>
+								<ul class="custom-select__options" data-select-options>
+									<li class="custom-select__option" data-value="1">
+										<p>
+											Добавить свечи зажигания Gen3 NGK <span>[12000 р]</span>
+										</p>
+									</li>
+									<li class="custom-select__option" data-value="2">
+										<p>Нет, спасибо!</p>
+									</li>
+								</ul>
+							</div>
+
+							<div class="custom-select product__select custom-select_3" data-select>
+								<div class="custom-select__trigger" data-select-trigger>
+									<p>
+										Добавить свечи зажигания Gen3 NGK <span>[12000 р]</span>
+									</p>
+								</div>
+								<ul class="custom-select__options" data-select-options>
+									<li class="custom-select__option" data-value="1">
+										<p>
+											Добавить свечи зажигания Gen3 NGK <span>[12000 р]</span>
+										</p>
+									</li>
+									<li class="custom-select__option" data-value="2">Нет, спасибо!</li>
+								</ul>
+							</div>
+
 
 							<div class="quantity">
 								<button type="button" class="quantity__button quantity__button_minus"></button>
@@ -463,6 +519,7 @@
 							<button class="carousel__btn carousel__btn_prev _icon-arrow-rg" type="button" aria-label="Prev slide"></button>
 							<button class="carousel__btn carousel__btn_next _icon-arrow-rg" type="button" aria-label="Next slide"></button>
 						</div>
+						<div class="pagination"></div>
 					</div>
 				</div>
 
@@ -532,10 +589,11 @@
 							<button class="carousel__btn carousel__btn_prev _icon-arrow-rg" type="button" aria-label="Prev slide"></button>
 							<button class="carousel__btn carousel__btn_next _icon-arrow-rg" type="button" aria-label="Next slide"></button>
 						</div>
+
 					</div>
 				</div>
 
-				<div class="page__carousel carousel carousel--3">
+				<!-- <div class="page__carousel carousel carousel--3">
 					<h2 class="carousel__title">
 						просмотренные
 					</h2>
@@ -551,8 +609,10 @@
 										<div class="card__row">
 											<span class="card__price price">3300</span>
 											<button class="card__favorite-btn favorite-btn" type="button" aria-label="Добавить в избранное">
-												<svg class="favorite-btn__icon" width="19" height="19" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+												<svg class="favorite-btn__icon" width="19" height="19" viewBox="0 0 24 24" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
 												</svg>
 											</button>
 											<button class="card__cart _icon-cart" type="button" aria-label="Добавить в корзину"></button>
@@ -568,8 +628,10 @@
 										<div class="card__row">
 											<span class="card__price price">3300</span>
 											<button class="card__favorite-btn favorite-btn" type="button" aria-label="Добавить в избранное">
-												<svg class="favorite-btn__icon" width="19" height="19" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+												<svg class="favorite-btn__icon" width="19" height="19" viewBox="0 0 24 24" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
 												</svg>
 											</button>
 											<button class="card__cart _icon-cart" type="button" aria-label="Добавить в корзину"></button>
@@ -585,8 +647,10 @@
 										<div class="card__row">
 											<span class="card__price price">3300</span>
 											<button class="card__favorite-btn favorite-btn" type="button" aria-label="Добавить в избранное">
-												<svg class="favorite-btn__icon" width="19" height="19" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+												<svg class="favorite-btn__icon" width="19" height="19" viewBox="0 0 24 24" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
 												</svg>
 											</button>
 											<button class="card__cart _icon-cart" type="button" aria-label="Добавить в корзину"></button>
@@ -598,11 +662,13 @@
 							</div>
 						</div>
 						<div class="carousel__nav">
-							<button class="carousel__btn carousel__btn_prev _icon-arrow-rg" type="button" aria-label="Prev slide"></button>
-							<button class="carousel__btn carousel__btn_next _icon-arrow-rg" type="button" aria-label="Next slide"></button>
+							<button class="carousel__btn carousel__btn_prev _icon-arrow-rg" type="button"
+								aria-label="Prev slide"></button>
+							<button class="carousel__btn carousel__btn_next _icon-arrow-rg" type="button"
+								aria-label="Next slide"></button>
 						</div>
 					</div>
-				</div>
+				</div> -->
 
 
 
@@ -751,7 +817,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20250126020303"></script>
+	<script src="js/app.min.js?_v=20250126230131"></script>
 
 	<script>
 		// избранное
