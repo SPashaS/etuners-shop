@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250206223110">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="theme-color" content="#222222">
@@ -233,10 +233,10 @@
 
 						<h1 class="product__title">Etuners 19861005 Катушка зажигания, высокопроизводительная, для двигателей MQB.
 						</h1>
-						<a href="#reviews" class="product__rating-wrapper">
+						<div class="product__rating-wrapper">
 							<div class="rating" data-rating="4"><span></span></div>
 							<span class="product__rating-num">(13)</span>
-						</a>
+						</div>
 						<div class="product__body-row">
 							<div>
 								<div class="product__article">Артикул: 19860510</div>
@@ -251,11 +251,16 @@
 							</div>
 						</div>
 
-						<div class="product__price-wrapper">
-							<div class="product__price price price_old">7500</div>
-							<div class="product__price price" data-base-price="5500">5500</div>
+						<div class="product__item">
+							<div class="product__price-wrapper">
+								<div class="product__price price price_old">5500</div>
+								<div class="product__price price" data-base-price="5500">5500</div>
+							</div>
 						</div>
 
+
+
+						<!-- <div class="product__price price">5500</div> -->
 						<div class="product__btns">
 
 							<div class="product__add">
@@ -266,11 +271,60 @@
 									</label>
 								</div>
 								<div class="product__description">
-									Добавить свечи зажигания Gen3 NGK <span class="product__price-extra" data-price="12000">[12000
-										р]</span>
+									Добавить свечи зажигания Gen3 NGK <span class="product__price-extra" data-price="12000">[12000 р]</span>
 								</div>
 
 							</div>
+
+
+							<!-- 
+							<div class="custom-select product__select" data-select>
+								<div class="custom-select__trigger" data-select-trigger>Добавить свечи зажигания Gen3 NGK (12000 р)
+								</div>
+								<ul class="custom-select__options" data-select-options>
+									<li class="custom-select__option" data-value="1">
+										Добавить свечи зажигания Gen3 NGK (12000 р)
+									</li>
+									<li class="custom-select__option" data-value="2">Нет, спасибо!</li>
+								</ul>
+							</div>
+
+							<div class="custom-select product__select custom-select_2" data-select>
+								<div class="custom-select__trigger" data-select-trigger>
+									<p>
+										Добавить свечи зажигания Gen3 NGK <span>[12000 р]</span>
+									</p>
+
+								</div>
+								<ul class="custom-select__options" data-select-options>
+									<li class="custom-select__option" data-value="1">
+										<p>
+											Добавить свечи зажигания Gen3 NGK <span>[12000 р]</span>
+										</p>
+									</li>
+									<li class="custom-select__option" data-value="2">
+										<p>Нет, спасибо!</p>
+									</li>
+								</ul>
+							</div>
+
+							<div class="custom-select product__select custom-select_3" data-select>
+								<div class="custom-select__trigger" data-select-trigger>
+									<p>
+										Добавить свечи зажигания Gen3 NGK <span>[12000 р]</span>
+									</p>
+								</div>
+								<ul class="custom-select__options" data-select-options>
+									<li class="custom-select__option" data-value="1">
+										<p>
+											Добавить свечи зажигания Gen3 NGK <span>[12000 р]</span>
+										</p>
+									</li>
+									<li class="custom-select__option" data-value="2">Нет, спасибо!</li>
+								</ul>
+							</div> -->
+
+
 							<div class="quantity">
 								<button type="button" class="quantity__button quantity__button_minus"></button>
 								<div class="quantity__input">
@@ -281,6 +335,10 @@
 							<div class="product__stockstatus">
 								В наличии
 							</div>
+							<!-- <div class="product__btns-row">
+				
+							</div> -->
+
 
 							<button class="product__btn btn" type="button">Купить</button>
 
@@ -330,7 +388,7 @@
 					</div>
 				</div>
 
-				<section class="page__carousel carousel carousel--1">
+				<div class="page__carousel carousel carousel--1">
 					<h2 class="carousel__title">
 						Рекомендуемые
 					</h2>
@@ -340,14 +398,9 @@
 
 								<div class="carousel__slide">
 									<div class="card">
-										<a href="#" class="card__img-ibg">
+										<a href="#" class="card__img-ibg card__img-ibg_contain">
 											<picture><source srcset="img/shop/product/1.webp" type="image/webp"><img src="img/shop/product/1.jpg" alt></picture>
 										</a>
-										<div class="card__rating-wrapper">
-											<div class="rating" data-rating="3.93">
-												<span></span>
-											</div>
-										</div>
 										<div class="card__row">
 											<span class="card__price price">3300</span>
 											<button class="card__favorite-btn favorite-btn" type="button" aria-label="Добавить в избранное">
@@ -362,14 +415,9 @@
 								</div>
 								<div class="carousel__slide">
 									<div class="card">
-										<a href="#" class="card__img-ibg">
+										<a href="#" class="card__img-ibg card__img-ibg_contain">
 											<picture><source srcset="img/shop/product/5.webp" type="image/webp"><img src="img/shop/product/5.jpg" alt></picture>
 										</a>
-										<div class="card__rating-wrapper">
-											<div class="rating" data-rating="3.93">
-												<span></span>
-											</div>
-										</div>
 										<div class="card__row">
 											<span class="card__price price">3300</span>
 											<button class="card__favorite-btn favorite-btn" type="button" aria-label="Добавить в избранное">
@@ -384,14 +432,9 @@
 								</div>
 								<div class="carousel__slide">
 									<div class="card">
-										<a href="#" class="card__img-ibg">
+										<a href="#" class="card__img-ibg card__img-ibg_contain">
 											<picture><source srcset="img/shop/product/6.webp" type="image/webp"><img src="img/shop/product/6.jpg" alt></picture>
 										</a>
-										<div class="card__rating-wrapper">
-											<div class="rating" data-rating="3.93">
-												<span></span>
-											</div>
-										</div>
 										<div class="card__row">
 											<span class="card__price price">3300</span>
 											<button class="card__favorite-btn favorite-btn" type="button" aria-label="Добавить в избранное">
@@ -406,14 +449,9 @@
 								</div>
 								<div class="carousel__slide">
 									<div class="card">
-										<a href="#" class="card__img-ibg">
+										<a href="#" class="card__img-ibg card__img-ibg_contain">
 											<picture><source srcset="img/shop/product/7.webp" type="image/webp"><img src="img/shop/product/7.jpg" alt></picture>
 										</a>
-										<div class="card__rating-wrapper">
-											<div class="rating" data-rating="3.93">
-												<span></span>
-											</div>
-										</div>
 										<div class="card__row">
 											<span class="card__price price">15000</span>
 											<button class="card__favorite-btn favorite-btn" type="button" aria-label="Добавить в избранное">
@@ -428,14 +466,9 @@
 								</div>
 								<div class="carousel__slide">
 									<div class="card">
-										<a href="#" class="card__img-ibg">
+										<a href="#" class="card__img-ibg card__img-ibg_contain">
 											<picture><source srcset="img/shop/product/2.webp" type="image/webp"><img src="img/shop/product/2.jpg" alt></picture>
 										</a>
-										<div class="card__rating-wrapper">
-											<div class="rating" data-rating="3.93">
-												<span></span>
-											</div>
-										</div>
 										<div class="card__row">
 											<span class="card__price price">3300</span>
 											<button class="card__favorite-btn favorite-btn" type="button" aria-label="Добавить в избранное">
@@ -450,14 +483,9 @@
 								</div>
 								<div class="carousel__slide">
 									<div class="card">
-										<a href="#" class="card__img-ibg">
+										<a href="#" class="card__img-ibg card__img-ibg_contain">
 											<picture><source srcset="img/shop/product/5.webp" type="image/webp"><img src="img/shop/product/5.jpg" alt></picture>
 										</a>
-										<div class="card__rating-wrapper">
-											<div class="rating" data-rating="3.93">
-												<span></span>
-											</div>
-										</div>
 										<div class="card__row">
 											<span class="card__price price">3300</span>
 											<button class="card__favorite-btn favorite-btn" type="button" aria-label="Добавить в избранное">
@@ -472,14 +500,9 @@
 								</div>
 								<div class="carousel__slide">
 									<div class="card">
-										<a href="#" class="card__img-ibg">
+										<a href="#" class="card__img-ibg card__img-ibg_contain">
 											<picture><source srcset="img/shop/product/6.webp" type="image/webp"><img src="img/shop/product/6.jpg" alt></picture>
 										</a>
-										<div class="card__rating-wrapper">
-											<div class="rating" data-rating="3.93">
-												<span></span>
-											</div>
-										</div>
 										<div class="card__row">
 											<span class="card__price price">3300</span>
 											<button class="card__favorite-btn favorite-btn" type="button" aria-label="Добавить в избранное">
@@ -494,14 +517,9 @@
 								</div>
 								<div class="carousel__slide">
 									<div class="card">
-										<a href="#" class="card__img-ibg">
+										<a href="#" class="card__img-ibg card__img-ibg_contain">
 											<picture><source srcset="img/shop/product/7.webp" type="image/webp"><img src="img/shop/product/7.jpg" alt></picture>
 										</a>
-										<div class="card__rating-wrapper">
-											<div class="rating" data-rating="3.93">
-												<span></span>
-											</div>
-										</div>
 										<div class="card__row">
 											<span class="card__price price">15000</span>
 											<button class="card__favorite-btn favorite-btn" type="button" aria-label="Добавить в избранное">
@@ -524,9 +542,9 @@
 						</div>
 						<div class="pagination"></div>
 					</div>
-				</section>
+				</div>
 
-				<section class="page__carousel carousel carousel--2">
+				<div class="page__carousel carousel carousel--2">
 					<h2 class="carousel__title">
 						просмотренные
 					</h2>
@@ -536,14 +554,9 @@
 
 								<div class="carousel__slide">
 									<div class="card">
-										<a href="#" class="card__img-ibg">
+										<a href="#" class="card__img-ibg card__img-ibg_contain">
 											<picture><source srcset="img/shop/product/3.webp" type="image/webp"><img src="img/shop/product/3.jpg" alt></picture>
 										</a>
-										<div class="card__rating-wrapper">
-											<div class="rating" data-rating="3.93">
-												<span></span>
-											</div>
-										</div>
 										<div class="card__row">
 											<span class="card__price price">3300</span>
 											<button class="card__favorite-btn favorite-btn" type="button" aria-label="Добавить в избранное">
@@ -558,14 +571,9 @@
 								</div>
 								<div class="carousel__slide">
 									<div class="card">
-										<a href="#" class="card__img-ibg">
+										<a href="#" class="card__img-ibg card__img-ibg_contain">
 											<picture><source srcset="img/shop/product/5.webp" type="image/webp"><img src="img/shop/product/5.jpg" alt></picture>
 										</a>
-										<div class="card__rating-wrapper">
-											<div class="rating" data-rating="3.93">
-												<span></span>
-											</div>
-										</div>
 										<div class="card__row">
 											<span class="card__price price">3300</span>
 											<button class="card__favorite-btn favorite-btn" type="button" aria-label="Добавить в избранное">
@@ -580,14 +588,9 @@
 								</div>
 								<div class="carousel__slide">
 									<div class="card">
-										<a href="#" class="card__img-ibg">
+										<a href="#" class="card__img-ibg card__img-ibg_contain">
 											<picture><source srcset="img/shop/product/6.webp" type="image/webp"><img src="img/shop/product/6.jpg" alt></picture>
 										</a>
-										<div class="card__rating-wrapper">
-											<div class="rating" data-rating="3.93">
-												<span></span>
-											</div>
-										</div>
 										<div class="card__row">
 											<span class="card__price price">3300</span>
 											<button class="card__favorite-btn favorite-btn" type="button" aria-label="Добавить в избранное">
@@ -609,7 +612,7 @@
 						</div>
 
 					</div>
-				</section>
+				</div>
 
 				<!-- <div class="page__carousel carousel carousel--3">
 					<h2 class="carousel__title">
@@ -621,15 +624,10 @@
 
 								<div class="carousel__slide">
 									<div class="card">
-										<a href="#" class="card__img-ibg">
+										<a href="#" class="card__img-ibg card__img-ibg_contain">
 											<picture><source srcset="img/shop/product/3.webp" type="image/webp"><img src="img/shop/product/3.jpg" alt></picture>
 										</a>
-										<div class="card__rating-wrapper">
-											<div class="rating" data-rating="3.93">
-												<span></span>
-											</div>
-										</div>
-<div class="card__row">
+										<div class="card__row">
 											<span class="card__price price">3300</span>
 											<button class="card__favorite-btn favorite-btn" type="button" aria-label="Добавить в избранное">
 												<svg class="favorite-btn__icon" width="19" height="19" viewBox="0 0 24 24" fill="none"
@@ -645,15 +643,10 @@
 								</div>
 								<div class="carousel__slide">
 									<div class="card">
-										<a href="#" class="card__img-ibg">
+										<a href="#" class="card__img-ibg card__img-ibg_contain">
 											<picture><source srcset="img/shop/product/5.webp" type="image/webp"><img src="img/shop/product/5.jpg" alt></picture>
 										</a>
-										<div class="card__rating-wrapper">
-											<div class="rating" data-rating="3.93">
-												<span></span>
-											</div>
-										</div>
-<div class="card__row">
+										<div class="card__row">
 											<span class="card__price price">3300</span>
 											<button class="card__favorite-btn favorite-btn" type="button" aria-label="Добавить в избранное">
 												<svg class="favorite-btn__icon" width="19" height="19" viewBox="0 0 24 24" fill="none"
@@ -669,15 +662,10 @@
 								</div>
 								<div class="carousel__slide">
 									<div class="card">
-										<a href="#" class="card__img-ibg">
+										<a href="#" class="card__img-ibg card__img-ibg_contain">
 											<picture><source srcset="img/shop/product/6.webp" type="image/webp"><img src="img/shop/product/6.jpg" alt></picture>
 										</a>
-										<div class="card__rating-wrapper">
-											<div class="rating" data-rating="3.93">
-												<span></span>
-											</div>
-										</div>
-<div class="card__row">
+										<div class="card__row">
 											<span class="card__price price">3300</span>
 											<button class="card__favorite-btn favorite-btn" type="button" aria-label="Добавить в избранное">
 												<svg class="favorite-btn__icon" width="19" height="19" viewBox="0 0 24 24" fill="none"
@@ -703,88 +691,7 @@
 					</div>
 				</div> -->
 
-				<section class="page__reviews reviews" id="reviews">
-					<h2 class="reviews__title">Отзывы (13)</h2>
 
-					<div class="reviews__list" data-showmore="2">
-						<div class="item-reviews">
-
-							<div class="item-reviews__row">
-								<div class="item-reviews__name">Имя Фамилия</div>
-								<div class="item-reviews__date">06.02.2025</div>
-							</div>
-							<div class="item-reviews__rating-wrapper">
-								<div class="rating" data-rating="4"><span></span></div>
-							</div>
-							<div class="item-reviews__text">
-								Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam voluptatum accusamus dolore
-								porro laboriosam veritatis voluptas inventore. Mollitia voluptatem dolores voluptatibus
-								recusandae, aperiam, molestiae, enim ut nihil reiciendis sit in.
-								Recusandae eligendi perferendis assumenda amet ratione consectetur in ea voluptate veritatis.
-								Possimus error, laboriosam, aliquid laudantium minima debitis reprehenderit fugit itaque
-								perspiciatis sequi quasi impedit est dicta sed, consequuntur odit.
-							</div>
-
-						</div>
-						<div class="item-reviews">
-
-							<div class="item-reviews__row">
-								<div class="item-reviews__name">Имя Фамилия</div>
-								<div class="item-reviews__date">06.02.2025</div>
-							</div>
-							<div class="item-reviews__rating-wrapper">
-								<div class="rating" data-rating="4"><span></span></div>
-							</div>
-							<div class="item-reviews__text">
-								Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam voluptatum accusamus dolore
-								porro laboriosam veritatis voluptas inventore. Mollitia voluptatem dolores voluptatibus
-								recusandae, aperiam, molestiae, enim ut nihil reiciendis sit in.
-								Recusandae eligendi perferendis assumenda amet ratione consectetur in ea voluptate veritatis.
-								Possimus error, laboriosam, aliquid laudantium minima debitis reprehenderit fugit itaque
-								perspiciatis sequi quasi impedit est dicta sed, consequuntur odit.
-							</div>
-
-						</div>
-						<div class="item-reviews">
-
-							<div class="item-reviews__row">
-								<div class="item-reviews__name">Имя Фамилия</div>
-								<div class="item-reviews__date">06.02.2025</div>
-							</div>
-							<div class="item-reviews__rating-wrapper">
-								<div class="rating" data-rating="4"><span></span></div>
-							</div>
-							<div class="item-reviews__text">
-								Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam voluptatum accusamus dolore
-								porro laboriosam veritatis voluptas inventore. Mollitia voluptatem dolores voluptatibus
-								recusandae, aperiam, molestiae, enim ut nihil reiciendis sit in.
-								Recusandae eligendi perferendis assumenda amet ratione consectetur in ea voluptate veritatis.
-								Possimus error, laboriosam, aliquid laudantium minima debitis reprehenderit fugit itaque
-								perspiciatis sequi quasi impedit est dicta sed, consequuntur odit.
-							</div>
-
-						</div>
-					</div>
-
-					<!-- <div class="reviews__message message-reviews">
-
-						<form action="#" class="form form_service" data-dev>
-
-							<input id="form-your-name" autocomplete="off" type="text" name="name" placeholder="Введите ваше имя"
-								data-required>
-
-							<textarea id="form-your-text" autocomplete="off" type="text" name="service" rows="10" minlength="200"
-								placeholder="Например: отключение контроля катализатора" data-required>
-									</textarea>
-
-							<button type="submit" class="btn">Отправить отзыв</button>
-
-
-						</form>
-
-					</div> -->
-
-				</section>
 
 			</div>
 		</main>
