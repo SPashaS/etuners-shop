@@ -206,6 +206,11 @@ h6 {
   font-size: inherit;
 }
 
+@media (hover: hover) {
+  a:hover {
+    color: var(--accent-color);
+  }
+}
 .lock body, .lg-on body {
   overflow: hidden;
   touch-action: none;
@@ -656,6 +661,12 @@ body.popup-show::after {
   display: none !important;
 }
 
+@media (hover: hover) {
+  header a:hover,
+  footer a:hover {
+    color: unset;
+  }
+}
 .title_mb {
   margin-bottom: 20px;
 }
@@ -728,18 +739,43 @@ h4 {
   font-size: 18px;
 }
 
-.slider-navigation {
+.nav-slider {
   display: flex;
+  justify-content: center;
   gap: 20px;
 }
-.slider-navigation__arrow::before {
-  font-size: 30px;
+.nav-slider__btn {
+  pointer-events: visible;
+  color: var(--accent-color);
 }
-.slider-navigation__arrow_prev::before {
-  transform: rotate(90deg);
+.nav-slider__btn::before {
+  font-size: 45px;
 }
-.slider-navigation__arrow_next::before {
-  transform: rotate(-90deg);
+@media (min-width: 1279.98px) {
+  .nav-slider__btn_prev {
+    transform: translateX(-55px);
+  }
+}
+@media (min-width: 1500px) {
+  .nav-slider__btn_prev {
+    transform: translateX(-95px);
+  }
+}
+.nav-slider__btn_prev::before {
+  rotate: 180deg;
+}
+@media (min-width: 1279.98px) {
+  .nav-slider__btn_next {
+    transform: translateX(55px);
+  }
+}
+@media (min-width: 1500px) {
+  .nav-slider__btn_next {
+    transform: translateX(95px);
+  }
+}
+.nav-slider__btn.swiper-button-disabled {
+  color: hsla(221, 44%, 41%, 0.25);
 }
 
 .text {
@@ -824,6 +860,9 @@ h4 {
   .favourite-icon::before {
     font-size: 21px;
   }
+}
+.favourite-icon_active {
+  color: rgb(206, 0, 0);
 }
 
 .card {
@@ -1035,6 +1074,8 @@ h4 {
 .form {
   display: grid;
   gap: 20px;
+  max-width: 600px;
+  width: 100%;
 }
 .form_service .form__submit input {
   min-width: 160px;
@@ -1052,9 +1093,40 @@ h4 {
   color: hsla(0, 0%, 25%, 0.9);
   line-height: 1.375;
 }
-.form input textarea,
-.form textarea textarea {
+.form textarea {
   resize: vertical;
+}
+
+.form__grade {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: 5px;
+}
+
+.form__grade input {
+  display: none;
+}
+
+.form__grade label {
+  cursor: pointer;
+  font-size: 35px;
+  color: #ccc;
+}
+
+.form__grade label::before {
+  content: "★";
+  transition: color 0.3s ease 0s;
+}
+
+@media (hover: hover) {
+  .form__grade label:hover,
+  .form__grade label:hover ~ label {
+    color: #ec9a00;
+  }
+}
+.form__grade input:checked ~ label {
+  color: #ec9a00;
 }
 
 .wrapper {
@@ -1270,12 +1342,9 @@ h4 {
   object-fit: cover;
 }
 .menu__submenu-title {
+  padding: 5px 0;
   display: block;
   font-size: 1.2rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 60px;
   text-align: center;
 }
 .menu__links {
@@ -2751,6 +2820,23 @@ h4 {
   }
 }
 
+.info__title {
+  font-size: 2.4rem;
+  line-height: 1.33;
+  margin-bottom: 28px;
+}
+.info-item__img-ibg {
+  padding-bottom: 50%;
+}
+.info-item__body {
+  padding: 10px 0;
+}
+.info-item__title {
+  font-size: 17px;
+  font-weight: 500;
+  text-transform: unset;
+}
+
 .page__product {
   padding-top: 40px;
 }
@@ -2973,7 +3059,6 @@ h4 {
 .page__carousel {
   padding-top: 40px;
   padding-bottom: 50px;
-  border-top: 1px solid rgba(35, 26, 43, 0.35);
 }
 
 .carousel--1 .pagination {
@@ -3206,10 +3291,18 @@ h4 {
 .reviews {
   padding-top: 50px;
 }
+.reviews__all {
+  padding-bottom: 35px;
+}
 .reviews__title {
   font-size: 2.4rem;
   line-height: 1.33;
   margin-bottom: 28px;
+}
+.reviews__write-title {
+  font-size: 2.1rem;
+  line-height: 1.33;
+  margin-bottom: 15px;
 }
 .reviews__list {
   display: grid;
