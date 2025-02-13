@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20250209190745">
+	<link rel="stylesheet" href="css/style.min.css">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="theme-color" content="#222222">
@@ -19,121 +19,155 @@
 	<div class="wrapper">
 		<header class="header">
 			<div class="header__container">
-				<div class="header__top">
+
+
+				<div class="header__row">
+
 					<div class="header__logo">
 						<a href="/" class="logo">
-							<picture><source srcset="img/logo.webp" type="image/webp"><img class="logo__image" src="img/logo.png" alt="Логотип"></picture>
+							<img class="logo__image" src="img/logo.png" alt="Логотип">
+							<div class="logo__text">
+								etuners<br>
+								parts
+							</div>
 						</a>
 					</div>
-					<div class="header__top-main">
-						<div class="header__top-menu top-menu">
-							<a href="#filter" class="top-menu__item">Чип тюнинг</a>
-							<div class="menu-item menu-item__has-submenu">
-								<div class="menu-item__item-title _icon-arrow-up">Наши дилеры</div>
-								<div class="submenu submenu_dillers">
-									<div class="submenu__dillers dillers-list">
-										<div class="dillers-list__body">
-											<div class="dillers-list__item">г.Алматы <a href="tel:+77009635131">+7 (700) 963-51-31</a> Михаил
-											</div>
-											<div class="dillers-list__item">г.Астана <a href="tel:+77014084684">+7 (701) 408-46-84</a> Евгений
-											</div>
-											<div class="dillers-list__item">г.Шымкент <a href="tel:+77017630101">+7 (701) 763-01-01</a> Нуркасым
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<a href="tel:+77009635131" class="top-menu__tel tel _icon-telephone-nobg">+7 (700) 963-51-31</a>
-						</div>
 
-						<a href="tel:+77009635131" class="header__tel tel _icon-telephone-nobg">+7 (700) 963-51-31</a>
-						<button type="button" class="burger" aria-label="Меню"><span class="burger__lines"></span></button>
-					</div>
-				</div>
-				<div class="header__bottom">
-					<!-- <div class="header__your-city your-city _icon-location">Ваш город: <span>Астана</span></div> -->
+					<div class="header__actions">
 
-					<div class="menu-item menu-item__has-submenu" data-da=".top-menu,767.98,2">
-						<div class="menu-item__item-title _icon-arrow-up">Цены на дополнительные услуги</div>
-						<div class="submenu">
-							<div class="submenu__price price-list">
-								<div class="price-list__header">
-									<span>Услуга</span><span>Цена</span>
-								</div>
-								<div class="price-list__body">
-									<div class="price-list__item">
-										<div class="price-list__item-col">
-											<p>Прошивка коробки передач</p>
-										</div>
-										<div class="price-list__item-price"><span>110.000</span></div>
-									</div>
-
-									<div class="price-list__item">
-										<div class="price-list__item-col">
-											<p>Прострелы под сброс газа (Popcorn)</p>
-										</div>
-										<div class="price-list__item-price">от <span>40.000</span></div>
-									</div>
-
-									<div class="price-list__item">
-										<div class="price-list__item-col">
-											<p>Ограничение максимальной скорости</p>
-										</div>
-										<div class="price-list__item-price"><span>30.000</span></div>
-									</div>
-
-									<div class="price-list__item">
-										<div class="price-list__item-col">
-											<p>Ограничение максимальных оборотов двигателя (P/ N) </p>
-										</div>
-										<div class="price-list__item-price"><span>30.000</span></div>
-									</div>
-									<div class="price-list__item">
-										<div class="price-list__item-col">
-											<p>Отключение контроля катализатора</p>
-										</div>
-										<div class="price-list__item-price"><span>40.000</span></div>
-									</div>
-
-									<div class="price-list__item">
-										<div class="price-list__item-col">
-											<p>Отключения кодов ошибок</p>
-										</div>
-										<div class="price-list__item-price">от <span>25.000</span> </div>
-									</div>
-
-									<div class="price-list__item">
-										<div class="price-list__item-col">
-											<p>Активация второй ступени масляного насоса</p>
-										</div>
-										<div class="price-list__item-price"><span>40.000</span></div>
-									</div>
-
-									<div class="price-list__item">
-										<div class="price-list__item-col">
-											<p>Холодный термостат</p>
-										</div>
-										<div class="price-list__item-price"><span>40.000</span></div>
-									</div>
-								</div>
+						<div class="header__action search">
+							<button class="search__btn _icon-search"></button>
+							<div class="search__block search-block">
+								<input type="text" class="search-block__input" placeholder="Поиск">
+								<button class="search-block__btn _icon-search"></button>
 							</div>
 						</div>
+
+						<a href="#" class="header__action">
+							<div class="cart-icon  _icon-cart">
+								<span class="cart-icon__num">10</span>
+							</div>
+						</a>
+
+						<a href="#" class="header__action">
+							<div class="acc-icon _icon-acc"></div>
+						</a>
+
+						<a href="#" class="header__action">
+							<span class="favourite-icon favourite-icon_active _icon-favourite"></span>
+						</a>
+
 					</div>
 
-					<div class="header__bottom-menu">
-						<a href="https://www.instagram.com/etunerskz/?igshid=MmVlMjlkMTBhMg%3D%3D" class="header__inst-link inst-link">Instagram</a>
-						<div class="header__menu menu">
-							<nav class="menu__body">
-								<ul class="menu__list">
-									<li class="menu__item"><a href="#advantages" class="menu__link">Преимущества</a></li>
-									<li class="menu__item"><a href="#who-we" class="menu__link">Кто мы</a></li>
-									<li class="menu__item"><a href="#contacts" class="menu__link">Контакты</a></li>
-								</ul>
-							</nav>
-						</div>
+
+					<div class="header__menu menu">
+						<button type="button" class="menu__icon burger"><span class="burger__lines"><span></span></span></button>
+						<nav class="menu__body">
+							<ul class="menu__list">
+								<li class="menu__item">
+									<div class="menu__item-row">
+										<a href="#" class="menu__link">Двигатель</a>
+										<button class="menu__toggle" aria-expanded="false" aria-label="Открыть подменю"></button>
+									</div>
+
+									<ul class="menu__submenu">
+										<li>
+											<a href="#" class="menu__submenu-item">
+												<img src="img/shop/product/BEZ_2232.jpg" alt="alt" class="menu__submenu-img">
+												<span class="menu__submenu-title">Двигатель</span>
+											</a>
+										</li>
+										<li>
+											<a href="#" class="menu__submenu-item">
+												<img src="img/shop/product/BEZ_2233.jpg" alt="alt" class="menu__submenu-img">
+												<span class="menu__submenu-title">Топливные</span>
+											</a>
+										</li>
+										<li>
+											<a href="#" class="menu__submenu-item">
+												<img src="img/shop/product/BEZ_2234.jpg" alt="alt" class="menu__submenu-img">
+												<span class="menu__submenu-title">Впуск</span>
+											</a>
+										</li>
+										<li>
+											<a href="#" class="menu__submenu-item">
+												<img src="img/shop/product/BEZ_2235.jpg" alt="alt" class="menu__submenu-img">
+												<span class="menu__submenu-title">Турбины</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li class="menu__item"><a href="#" class="menu__link">Топливная</a></li>
+								<li class="menu__item">
+									<div class="menu__item-row">
+										<a href="#" class="menu__link">Впуски</a>
+										<button class="menu__toggle" aria-expanded="false" aria-label="Открыть подменю"></button>
+									</div>
+
+									<ul class="menu__submenu">
+										<li>
+											<a href="#" class="menu__submenu-item">
+												<img src="img/shop/product/BEZ_2232.jpg" alt="alt" class="menu__submenu-img">
+												<span class="menu__submenu-title">Двигатель</span>
+											</a>
+										</li>
+										<li>
+											<a href="#" class="menu__submenu-item">
+												<img src="img/shop/product/BEZ_2233.jpg" alt="alt" class="menu__submenu-img">
+												<span class="menu__submenu-title">Топливные</span>
+											</a>
+										</li>
+										<li>
+											<a href="#" class="menu__submenu-item">
+												<img src="img/shop/product/BEZ_2234.jpg" alt="alt" class="menu__submenu-img">
+												<span class="menu__submenu-title">Впуск</span>
+											</a>
+										</li>
+										<li>
+											<a href="#" class="menu__submenu-item">
+												<img src="img/shop/product/BEZ_2235.jpg" alt="alt" class="menu__submenu-img">
+												<span class="menu__submenu-title">Турбины</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li class="menu__item"><a href="#" class="menu__link">Турбины</a></li>
+							</ul>
+
+							<ul class="menu__links">
+								<li><a href="" class="menu__link">Контакты</a></li>
+								<li><a href="" class="menu__link">Способы доставки</a></li>
+							</ul>
+
+							<div class="menu__actions">
+								<div class="menu__actions-item">
+									<a href="#" class="item-actions">
+										<span class="item-actions__icon _icon-acc"></span>
+										<span class="item-actions__title">Аккаунт</span>
+									</a>
+								</div>
+								<div class="menu__actions-item">
+									<a href="#" class="item-actions">
+										<span class="item-actions__icon _icon-telephone"></span>
+										<span class="item-actions__title">Телефон</span>
+									</a>
+								</div>
+								<div class="menu__actions-item">
+									<a href="#" class="item-actions">
+										<span class="item-actions__icon _icon-cart cart-icon">
+											<span class="cart-icon__num">10</span>
+										</span>
+										<span class="item-actions__title">Корзина</span>
+									</a>
+								</div>
+							</div>
+
+						</nav>
 					</div>
+
 
 				</div>
+
 			</div>
 		</header>
 		<main class="page">
@@ -143,7 +177,7 @@
 					<div class="promo__slider">
 						<div class="promo__swiper">
 							<div class="promo__slide slide-promo">
-								<picture><source srcset="img/promo/1.webp" type="image/webp"><img class="slide-promo__img" src="img/promo/1.jpg" alt="1"></picture>
+								<img class="slide-promo__img" src="img/promo/1.jpg" alt="1">
 								<div class="slide-promo__content">
 									<div class="slide-promo__title">ЧИП-ТЮНИНГ АВТОМОБИЛЕЙ В казахстане</div>
 									<div class="slide-promo__subtitle">мы любим, то что делаем</div>
@@ -156,7 +190,7 @@
 								</div>
 							</div>
 							<div class="promo__slide slide-promo">
-								<picture><source srcset="img/promo/2.webp" type="image/webp"><img class="slide-promo__img" src="img/promo/2.jpg" alt="2"></picture>
+								<img class="slide-promo__img" src="img/promo/2.jpg" alt="2">
 								<div class="slide-promo__content">
 									<div class="slide-promo__title">Более 10 Лет опыта в Казахстане</div>
 									<div class="slide-promo__subtitle">Работаем с 2007 года</div>
@@ -170,7 +204,7 @@
 								</div>
 							</div>
 							<div class="promo__slide slide-promo">
-								<picture><source srcset="img/promo/3.webp" type="image/webp"><img class="slide-promo__img" src="img/promo/3.jpg" alt="3"></picture>
+								<img class="slide-promo__img" src="img/promo/3.jpg" alt="3">
 								<div class="slide-promo__content">
 									<div class="slide-promo__title">Техническая поддержка на всем этапе подготовки. </div>
 									<div class="slide-promo__subtitle">Нестандартные решения: </div>
@@ -183,7 +217,7 @@
 								</div>
 							</div>
 							<div class="promo__slide slide-promo">
-								<picture><source srcset="img/promo/4.webp" type="image/webp"><img class="slide-promo__img" src="img/promo/4.jpg" alt="4"></picture>
+								<img class="slide-promo__img" src="img/promo/4.jpg" alt="4">
 								<div class="slide-promo__content">
 									<div class="slide-promo__title">Самая доступная цена в казахстане</div>
 									<div class="slide-promo__subtitle">предлагаем лучшие решения на рынке</div>
@@ -485,7 +519,7 @@
 						</p>
 					</div>
 					<div class="program__image">
-						<picture><source srcset="img/program/image.webp" type="image/webp"><img src="img/program/image.jpg" alt="img"></picture>
+						<img src="img/program/image.jpg" alt="img">
 					</div>
 				</div>
 			</section>
@@ -558,7 +592,7 @@
 							</p>
 						</div>
 						<div class="team__image">
-							<picture><source srcset="img/team/team.webp" type="image/webp"><img src="img/team/team.jpg" alt="Наша команда:"></picture>
+							<img src="img/team/team.jpg" alt="Наша команда:">
 						</div>
 					</div>
 				</div>
@@ -567,19 +601,19 @@
 				<div class="options__container">
 					<h2 class="options__title title title_mb">Дополнительные опции:</h2>
 					<ul class="options__list">
-						<li class="options__item"><picture><source srcset="img/options/1.webp" type="image/webp"><img src="img/options/1.png" alt="1"></picture><span>Прошивка коробки передач</span></li>
-						<li class="options__item"><picture><source srcset="img/options/2.webp" type="image/webp"><img src="img/options/2.png" alt="2"></picture><span>Прострелы под сброс газа
+						<li class="options__item"><img src="img/options/1.png" alt="1"><span>Прошивка коробки передач</span></li>
+						<li class="options__item"><img src="img/options/2.png" alt="2"><span>Прострелы под сброс газа
 								(Popcorn)</span></li>
-						<li class="options__item"><picture><source srcset="img/options/3.webp" type="image/webp"><img src="img/options/3.png" alt="3"></picture><span>Ограничение максимальной
+						<li class="options__item"><img src="img/options/3.png" alt="3"><span>Ограничение максимальной
 								скорости</span></li>
-						<li class="options__item"><picture><source srcset="img/options/4.webp" type="image/webp"><img src="img/options/4.png" alt="4"></picture><span>Ограничение максимальных оборотов
+						<li class="options__item"><img src="img/options/4.png" alt="4"><span>Ограничение максимальных оборотов
 								двигателя (P/ N)</span></li>
-						<li class="options__item"><picture><source srcset="img/options/5.webp" type="image/webp"><img src="img/options/5.png" alt="5"></picture><span>Отключение контроля катализатора
+						<li class="options__item"><img src="img/options/5.png" alt="5"><span>Отключение контроля катализатора
 							</span></li>
-						<li class="options__item"><picture><source srcset="img/options/6.webp" type="image/webp"><img src="img/options/6.png" alt="6"></picture><span>Отключения кодов ошибок</span></li>
-						<li class="options__item"><picture><source srcset="img/options/7.webp" type="image/webp"><img src="img/options/7.png" alt="7"></picture><span>Активация второй ступени масляного
+						<li class="options__item"><img src="img/options/6.png" alt="6"><span>Отключения кодов ошибок</span></li>
+						<li class="options__item"><img src="img/options/7.png" alt="7"><span>Активация второй ступени масляного
 								насоса</span></li>
-						<li class="options__item"><picture><source srcset="img/options/8.webp" type="image/webp"><img src="img/options/8.png" alt="8"></picture><span>Холодный термостат</span></li>
+						<li class="options__item"><img src="img/options/8.png" alt="8"><span>Холодный термостат</span></li>
 					</ul>
 				</div>
 			</section>
@@ -608,7 +642,7 @@
 						</div>
 						<div class="answers__column">
 							<div class="answers__image">
-								<picture><source srcset="img/answers/mobile.webp" type="image/webp"><img src="img/answers/mobile.png" alt="Мобильная версия сайта"></picture>
+								<img src="img/answers/mobile.png" alt="Мобильная версия сайта">
 							</div>
 						</div>
 					</div>
@@ -622,7 +656,7 @@
 						<div class="desc__header">
 							<div class="desc__header-title">etuners</div>
 							<div class="desc__header-subtitle">Он один такой</div>
-							<picture><source srcset="img/desc/1.webp" type="image/webp"><img src="img/desc/1.jpg" alt="1"></picture>
+							<img src="img/desc/1.jpg" alt="1">
 						</div>
 						<div class="desc__body">
 							<div class="desc__body-content">
@@ -668,12 +702,12 @@
 								</div>
 							</div>
 							<div class="desc__body-image">
-								<picture><source srcset="img/desc/2.webp" type="image/webp"><img src="img/desc/2.jpg" alt="2"></picture>
+								<img src="img/desc/2.jpg" alt="2">
 							</div>
 						</div>
 						<div class="desc__footer">
 							<div class="desc__footer-text"></div>
-							<picture><source srcset="img/desc/3.webp" type="image/webp"><img src="img/desc/3.jpg" alt="3"></picture>
+							<img src="img/desc/3.jpg" alt="3">
 						</div>
 					</div>
 				</div>
@@ -684,22 +718,22 @@
 					<div class="brends__slider">
 						<div class="brends__swiper">
 							<div class="brends__slide">
-								<picture><source srcset="img/brends/porsche.webp" type="image/webp"><img class="brends__slide-image" src="img/brends/porsche.png" alt="Porsche"></picture>
+								<img class="brends__slide-image" src="img/brends/porsche.png" alt="Porsche">
 							</div>
 							<div class="brends__slide">
-								<picture><source srcset="img/brends/bmw.webp" type="image/webp"><img class="brends__slide-image" src="img/brends/bmw.png" alt="BMW"></picture>
+								<img class="brends__slide-image" src="img/brends/bmw.png" alt="BMW">
 							</div>
 							<div class="brends__slide">
-								<picture><source srcset="img/brends/audi.webp" type="image/webp"><img class="brends__slide-image" src="img/brends/audi.png" alt="Audi"></picture>
+								<img class="brends__slide-image" src="img/brends/audi.png" alt="Audi">
 							</div>
 							<div class="brends__slide">
-								<picture><source srcset="img/brends/mercedes.webp" type="image/webp"><img class="brends__slide-image" src="img/brends/mercedes.png" alt="Mercedes"></picture>
+								<img class="brends__slide-image" src="img/brends/mercedes.png" alt="Mercedes">
 							</div>
 							<div class="brends__slide">
-								<picture><source srcset="img/brends/folksvagen.webp" type="image/webp"><img class="brends__slide-image" src="img/brends/folksvagen.png" alt="Folksvagen"></picture>
+								<img class="brends__slide-image" src="img/brends/folksvagen.png" alt="Folksvagen">
 							</div>
 							<div class="brends__slide">
-								<picture><source srcset="img/brends/skoda.webp" type="image/webp"><img class="brends__slide-image" src="img/brends/skoda.png" alt="Skoda"></picture>
+								<img class="brends__slide-image" src="img/brends/skoda.png" alt="Skoda">
 							</div>
 
 						</div>
@@ -732,7 +766,7 @@
 						</div>
 						<div class="connect__body">
 							<div class="connect__image">
-								<picture><source srcset="img/connect/photo.webp" type="image/webp"><img src="img/connect/photo.jpg" alt="Мы на связи"></picture>
+								<img src="img/connect/photo.jpg" alt="Мы на связи">
 								<span class="connect__rec"></span>
 							</div>
 							<div class="connect__body-content">
@@ -754,11 +788,11 @@
 					<div class="footer__info">
 						<div class="footer__logo">
 							<a href="/" class="logo">
-								<picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="лого"></picture>
+								<img src="img/logo.png" alt="лого">
 							</a>
 						</div>
 						<div class="footer__info-body">
-							<span>©2023-2024еTuners.com</span>
+							<span>©2023-2025еTuners.gr</span>
 							<span>Все права защищены</span>
 							<a href="#">Публичная оферта</a>
 						</div>
@@ -883,7 +917,7 @@
 								Мы свяжемся с вами в самое ближайшее время, ожидайте звонка
 							</p>
 							<div class="logo">
-								<picture><source srcset="img/logo.webp" type="image/webp"><img class="logo__image" src="img/logo.png" alt="Логотип"></picture>
+								<img class="logo__image" src="img/logo.png" alt="Логотип">
 							</div>
 						</div>
 					</div>
@@ -892,7 +926,7 @@
 		</div>
 	</div>
 
-	<script src="js/app.min.js?_v=20250209190745"></script>
+	<script src="js/app.min.js"></script>
 
 	<script>
 		// избранное
